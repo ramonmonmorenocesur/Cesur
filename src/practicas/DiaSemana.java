@@ -1,3 +1,4 @@
+package practicas;
 
 public class DiaSemana {
 	public static void main(String[] args) {
