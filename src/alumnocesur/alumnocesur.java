@@ -1,9 +1,9 @@
 package alumnocesur;
-
+import practicas.Creator;
 public class alumnocesur {
 
 	public static void main(String[] args) {
-
+		
 		
 		Alumno ramon = new Alumno("ramon", 24, "DAM");
 
@@ -22,18 +22,7 @@ public class alumnocesur {
 		// TODO Auto-generated method stub
 		Clase premiumPlus = new Clase("premiumPlus");
 		
-		premiumPlus.add(dario);
-		premiumPlus.add(ale);
-		premiumPlus.add(JOSERAMON);
-		premiumPlus.add(paco);
-		premiumPlus.add(SANTI);
-		premiumPlus.add(simran);
-		premiumPlus.add(yajin);
-		premiumPlus.add(andres);
-		premiumPlus.add(adria);
-		premiumPlus.add(alvaro);
-		premiumPlus.add(juanan);
-		System.out.println(premiumPlus);
+		
 		
 		   for (int i=0;i<premiumPlus.getNumAlumnos();i++) {
 			  if(premiumPlus.getAlumnos()[i].getNombre()=="dario") {
@@ -54,5 +43,10 @@ public class alumnocesur {
 
 
 		   }
+		   for (int i =0;i<15;i++) {
+			   premiumPlus.add(new Alumno(Creator.newName(),Creator.newAge(),"Dam"));
+			   System.out.println(premiumPlus.getAlumnos()[i]);
+		   } 
+		   
 	}
 }

@@ -5,6 +5,14 @@ class Clase {
 	private static final int TOTALALUMNOS = 15;
 	private int numAlumnos;
 	private Alumno[] alumnos;
+	private Profesor profesor;
+	public Profesor getProfesor() {
+		return profesor;
+	}
+
+	public void setProfesor(Profesor profesor) {
+		this.profesor = profesor;
+	}
 
 	public Clase(String nombre) {
 		alumnos = new Alumno[TOTALALUMNOS];
@@ -48,7 +56,7 @@ class Clase {
 	}
 
 	public String toString() {
-		return ("Clase: " + nombre + "NumAlumnos " + numAlumnos + "]");
+		return ("Clase: " + nombre + "NumAlumnos " + numAlumnos + "Profesor" + profesor);
 	}// fin metodo
 
 } // fin clase
