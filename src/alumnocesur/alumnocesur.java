@@ -1,52 +1,39 @@
 package alumnocesur;
+
+import java.util.Random;
 import practicas.Creator;
+
 public class alumnocesur {
 
 	public static void main(String[] args) {
-		
-		
-		Alumno ramon = new Alumno("ramon", 24, "DAM");
+		Random aleatorio = new Random();
+		Centroestudio cesurEste = new Centroestudio("Cesur El Palo", 5, 4);
+		Clase claseTemp;
+		String nombreClaseTemp;
+		Administrativo adminTemporal;
+		for (int i = 0; i < 5; i++) {// construir 5 clases.
+			 nombreClaseTemp = Creator.newClase();
+			claseTemp = new Clase(Creator.newClase());
+			claseTemp.setProfesor(new Profesor(Creator.newName(), Creator.newAge(), nombreClaseTemp));//
+	
+			for (int j = 0; j < 15; j++) {
 
-		
-		Alumno paco = new Alumno("paco", 17, "DAM");
-		Alumno SANTI = new Alumno("santi", 22, "DAM");
-		Alumno andres = new Alumno("andres", 20, "DAM");
-		Alumno alvaro = new Alumno("alvaro", 18, "DAM");
-		Alumno adria = new Alumno("adrian", 25, "DAM");
-		Alumno yajin = new Alumno("yajin", 27, "DAM");
-		Alumno simran = new Alumno("simran", 23, "DAM");
-		Alumno ale = new Alumno("ale", 23, "DAM");
-		Alumno dario = new Alumno("dario", 17, "DAM");
-		Alumno JOSERAMON = new Alumno("Josera", 39, "DAM");
-		Alumno juanan = new Alumno("Juanan",23,"DAW");
-		// TODO Auto-generated method stub
-		Clase premiumPlus = new Clase("premiumPlus");
-		
-		
-		
-		   for (int i=0;i<premiumPlus.getNumAlumnos();i++) {
-			  if(premiumPlus.getAlumnos()[i].getNombre()=="dario") {
-				  premiumPlus.getAlumnos()[i].setEdad(18);
-				  System.out.println(premiumPlus.getAlumnos()[i].getEdad());
-			  }
-				  
-			  
-		   }
-		   for(int i =0; i<premiumPlus.getNumAlumnos();i++) {
-			   if(premiumPlus.getAlumnos()[i].getCurso()=="DAW") {
-				 System.out.println("alumnos de DAW "+premiumPlus.getAlumnos()[i].getNombre());
-				 
-			   } else {
-				   System.out.println("alumnos de DAM "+premiumPlus.getAlumnos()[i].getNombre());
-			   }
-				   
+				claseTemp.add(new Alumno(Creator.newName(), Creator.newAge(), nombreClaseTemp));
 
+			}
+			cesurEste.getClases()[i]=claseTemp;
+		}
+		for (int i =0;i<4;i++) {
+			adminTemporal= new Administrativo (Creator.newName(),
+					Creator.newAge(),
+					aleatorio.nextBoolean()); 
+			
+				cesurEste.getAdministrativos()[i]=adminTemporal;
+			
 
-		   }
-		   for (int i =0;i<15;i++) {
-			   premiumPlus.add(new Alumno(Creator.newName(),Creator.newAge(),"Dam"));
-			   System.out.println(premiumPlus.getAlumnos()[i]);
-		   } 
-		   
+		}   System.out.println(cesurEste.getAdministrativos());
+		Centroestudio cesurPTA = new Centroestudio("CesurPTA");
+
 	}
+
 }

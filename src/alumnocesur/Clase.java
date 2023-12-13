@@ -6,6 +6,7 @@ class Clase {
 	private int numAlumnos;
 	private Alumno[] alumnos;
 	private Profesor profesor;
+
 	public Profesor getProfesor() {
 		return profesor;
 	}
@@ -59,4 +60,42 @@ class Clase {
 		return ("Clase: " + nombre + "NumAlumnos " + numAlumnos + "Profesor" + profesor);
 	}// fin metodo
 
-} // fin clase
+	public void delete(String nombre) {
+		int indice = 0;
+		while ((indice < numAlumnos) && (alumnos[indice].getNombre() != nombre)) {
+			indice++;
+		}
+		if (indice < numAlumnos) {
+			for (; indice < numAlumnos - 1; indice++) {
+				alumnos[indice] = alumnos[indice + 1];
+
+			}
+			numAlumnos = numAlumnos - 1;
+		}  
+
+		}
+	public void delete2(String nombre) {
+	int	indice=0;
+		boolean encontrado = false;
+		while (!encontrado&&(indice<numAlumnos-1)) {
+			if(alumnos[indice].getNombre()==nombre) {
+				encontrado = true;
+				
+			}else {
+				indice++;
+				
+			
+			}
+		}
+		if (encontrado == true);
+		
+	}
+
+	public void setAlumnos(String newName, int newAge, String newClase) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	}
+
+// fin clase
