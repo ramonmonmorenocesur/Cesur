@@ -21,7 +21,9 @@ public class Administrativo extends Persona {
 	public void setIdiomas(boolean idiomas) {
 		this.idiomas = idiomas;
 	}
-	
+	public String toString() {
+		return String
+	}
 	
 	
 	

@@ -31,7 +31,7 @@ public class alumnocesur {
 				cesurEste.getAdministrativos()[i]=adminTemporal;
 			
 
-		}   System.out.println(cesurEste.getAdministrativos());
+		}   
 		Centroestudio cesurPTA = new Centroestudio("CesurPTA");
 
 	}
